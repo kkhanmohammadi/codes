@@ -11,7 +11,7 @@ API_Key=""# enter your API key
 
 
 import requests
-params = {'apikey': 'bd9c0304ae83857487a6940e4a73f56c59ad1945f3a26213253b28d7d003e9d3'}
+params = {'apikey': ''} # enter your API key
 files = {'file': ('156_04134211F5E4FC47B6E1225C48D9C62A8348FB6B373F9A6CC52F735A52638E2E.apk', open('D:/Ava/Empirical2018/test/Adwares/ads/156_04134211F5E4FC47B6E1225C48D9C62A8348FB6B373F9A6CC52F735A52638E2E.apk', 'rb'))}
 response = requests.post('https://www.virustotal.com/vtapi/v2/file/scan', files=files, params=params)
 json_response = response.json()
@@ -114,7 +114,7 @@ path="E:/Ava1/RepackagedNameTypeUnknown/8"
 for file in sorted(os.listdir("E:/Ava1/RepackagedNameTypeUnknown/8")):
     size=os.path.getsize(os.path.join("E:/Ava1/RepackagedNameTypeUnknown/8", file))
    # print(size)
-    if(size<21000000):
+    if(size<80000000):
         print(os.path.join("E:/Ava1/RepackagedNameTypeUnknown/8", file))
         jdump=''
 
