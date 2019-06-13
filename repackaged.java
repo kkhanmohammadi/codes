@@ -21,7 +21,7 @@ import java.nio.file.StandardCopyOption;
 public class repackaged {
 	final static String folder_name="C:/Ava/android/Dataset/theZoo/repackagedPairs";
 	private static final int BUFFER_SIZE = 4096;
-    private static final String API_Key= "a222a1ac3914ff140307ad1e3b2189843e721c19920233a359d3cedad70d7ba4";
+    private static final String API_Key= "";
     private static int LINE_NO = 0;
 
 	public static void main(String[] args) {
