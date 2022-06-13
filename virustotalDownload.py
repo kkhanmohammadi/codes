@@ -35,7 +35,7 @@ jdata['resource']
 # In[7]:
 
 
-params = {'apikey': 'bd9c0304ae83857487a6940e4a73f56c59ad1945f3a26213253b28d7d003e9d3', 'resource': '04134211f5e4fc47b6e1225c48d9c62a8348fb6b373f9a6cc52f735a52638e2e'}
+params = {'apikey': '', 'resource': '04134211f5e4fc47b6e1225c48d9c62a8348fb6b373f9a6cc52f735a52638e2e'}
 headers = {
   "Accept-Encoding": "gzip, deflate",
   "User-Agent" : "gzip,  My Python requests library example client or username"
@@ -121,13 +121,13 @@ for file in sorted(os.listdir("E:/Ava1/RepackagedNameTypeUnknown/8")):
         try:
             with open(os.path.join("E:/Ava1/RepackagedNameTypeUnknown/8", file), 'rb') as of:
                 files = {'file': (file, of)}
-                params = {'apikey': 'bd9c0304ae83857487a6940e4a73f56c59ad1945f3a26213253b28d7d003e9d3'}
+                params = {'apikey': ''}
                 response = requests.post('https://www.virustotal.com/vtapi/v2/file/scan', files=files, params=params)
                 print('1:'+str(i))
                 json_response = response.json()
                 jdump=json.dumps(json_response)
             jdata=json.loads(jdump)
-            params = {'apikey': 'bd9c0304ae83857487a6940e4a73f56c59ad1945f3a26213253b28d7d003e9d3', 'resource': jdata['resource']}
+            params = {'apikey': '', 'resource': jdata['resource']}
             headers = {  "Accept-Encoding": "gzip, deflate",  "User-Agent" : "gzip,  My Python requests library example client or username"}
             response = requests.get('https://www.virustotal.com/vtapi/v2/file/report',params=params, headers=headers)
             print('2:'+str(i))
